@@ -82,6 +82,37 @@ let b1 = BoxInt(intValue: 2);
 let b2 = BoxInt(intValue: 4);
 */
 
+// 重载函数
+func test(string: String) -> Int? {
+    return Int(string) ?? -1;
+}
+
+func test(string: String) -> String {
+    return string;
+}
+
+var value1: Int = test(string: "sdf")!
+var value2: String = test(string: "124")
+
+// 关键词用作函数参数
+
+func index(for element: Int, in collection: [Int]) -> Int? {
+    
+    for (num, e) in collection.enumerated() {
+        if element == e {
+            return num;
+        }
+    }
+    return nil;
+
+}
+
+
+index(for: 3, in: [1, 2, 4, 3, 8])
+
+var array: Array = [2, 3, 4, 5, 6];
+array[0]
+array.count
 
 
 
